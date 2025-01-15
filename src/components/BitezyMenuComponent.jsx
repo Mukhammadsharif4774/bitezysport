@@ -45,7 +45,7 @@ export default function ({item}) {
     <TouchableOpacity
       style={styles.main}
       onPress={() =>
-        navigation.navigate('FanZoneProductDetailScreen', {product: item})
+        navigation.navigate('BitezyProductDetailScreen', {product: item})
       }>
       <Image source={item?.image} style={styles.image} />
 
@@ -75,11 +75,11 @@ export default function ({item}) {
 
 const styles = StyleSheet.create({
   main: {
-    width: '90%',
+    width: '85%',
     alignSelf: 'center',
     height: 160,
     marginTop: 35,
-    backgroundColor: COLORS.black,
+    backgroundColor: COLORS.white,
     justifyContent: 'space-between',
     alignItems: 'center',
     borderRadius: 12,
@@ -87,16 +87,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   image: {
-    width: '40%',
-    height: 160,
-    borderTopLeftRadius: 12,
-    borderBottomLeftRadius: 12,
+    width: '43%',
+    height: 140,
+    borderRadius: 12,
     alignSelf: 'center',
+    marginLeft: -20,
   },
   title: {
     fontSize: 18,
     fontFamily: FONTS.bold,
-    color: COLORS.white,
+    color: COLORS.black,
     width: '100%',
     textAlign: 'center',
     marginTop: 15,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 14,
     fontFamily: FONTS.light,
-    color: COLORS.white,
+    color: COLORS.black,
     width: '100%',
     textAlign: 'center',
     paddingHorizontal: 10,

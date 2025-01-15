@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import {useNavigation} from '@react-navigation/native';
-import FanZoneHeader from '../components/FanZoneHeader';
-import FanZoneComponent from '../components/FanZoneComponent';
+import BitezyHeader from '../components/BitezyHeader';
+import BitezyComponent from '../components/BitezyComponent';
 import BackgroundImage from '../assets/background.png';
 
 const InputField = ({placeholder, value, onChangeText}) => (
@@ -42,13 +42,13 @@ export default function () {
 
   const handleReservation = () => {
     navigation.navigate('DrawerNavigator', {
-      screen: 'FanZoneReservationSuccessScreen',
+      screen: 'BitezyReservationSuccessScreen',
     });
   };
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader />
+      <BitezyHeader />
 
       <Text style={styles.title}>Резерв столика</Text>
 
@@ -84,7 +84,7 @@ export default function () {
         />
       </ScrollView>
 
-      <FanZoneComponent
+      <BitezyComponent
         text={'Зарезервировать'}
         style={styles.button}
         onPress={handleReservation}
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.white,
     marginTop: 10,
-    borderRadius: 12,
+    borderRadius: 0,
     backgroundColor: COLORS.white,
   },
   button: {

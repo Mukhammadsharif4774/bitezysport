@@ -6,14 +6,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Dimensions} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {COLORS, FONTS} from './helpers/colors';
-import FanZoneHomeScreen from './pages/FanZoneHomeScreen';
-import FanZoneCartScreen from './pages/FanZoneCartScreen';
-import FanZoneCartSuccessScreen from './pages/FanZoneCartSuccessScreen';
-import FanZoneReservationScreen from './pages/FanZoneReservationScreen';
-import FanZoneReservationSuccessScreen from './pages/FanZoneReserveSuccessScreen';
-import FanZoneContactsScreen from './pages/FanZoneContactsScreen';
-import FanZoneTranslationsScreen from './pages/FanZoneTranslationsScreen';
-import FanZoneProductDetailScreen from './pages/FanZoneProductDetailScreen';
+import BitezyHomeScreen from './pages/BitezyHomeScreen';
+import BitezyCartScreen from './pages/BitezyCartScreen';
+import BitezyCartSuccessScreen from './pages/BitezyCartSuccessScreen';
+import BitezyReservationScreen from './pages/BitezyReservationScreen';
+import BitezyReservationSuccessScreen from './pages/BitezyReserveSuccessScreen';
+import BitezyContactsScreen from './pages/BitezyContactsScreen';
+import BitezyTranslationsScreen from './pages/BitezyTranslationsScreen';
+import BitezyProductDetailScreen from './pages/BitezyProductDetailScreen';
 
 const {width} = Dimensions.get('window');
 const Stack = createStackNavigator();
@@ -46,29 +46,29 @@ function DrawerNavigator() {
         options={{title: 'Main'}}
       />
       <Drawer.Screen
-        name="FanZoneCartScreen"
-        component={FanZoneCartScreen}
+        name="BitezyCartScreen"
+        component={BitezyCartScreen}
         options={{title: 'Cart'}}
       />
       <Drawer.Screen
-        name="FanZoneCartSuccessScreen"
-        component={FanZoneCartSuccessScreen}
+        name="BitezyCartSuccessScreen"
+        component={BitezyCartSuccessScreen}
         options={{title: 'Cart Success'}}
       />
       <Drawer.Screen
-        name="FanZoneReservationScreen"
-        component={FanZoneReservationScreen}
+        name="BitezyReservationScreen"
+        component={BitezyReservationScreen}
         options={{title: 'Reservation'}}
       />
       <Drawer.Screen
-        name="FanZoneReservationSuccessScreen"
-        component={FanZoneReservationSuccessScreen}
+        name="BitezyReservationSuccessScreen"
+        component={BitezyReservationSuccessScreen}
         options={{title: 'Reservation Success'}}
       />
 
       <Drawer.Screen
-        name="FanZoneProductDetailScreen"
-        component={FanZoneProductDetailScreen}
+        name="BitezyProductDetailScreen"
+        component={BitezyProductDetailScreen}
         options={{title: 'Reservation Success'}}
       />
     </Drawer.Navigator>
@@ -81,50 +81,49 @@ function TabNavigator() {
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarActiveTintColor: COLORS.main,
-        tabBarInactiveTintColor: COLORS.white,
+        tabBarInactiveTintColor: COLORS.black,
         tabBarStyle: {
           height: 90,
-          backgroundColor: COLORS.black,
+          backgroundColor: COLORS.white,
           paddingTop: 10,
         },
         tabBarLabelStyle: {
           fontSize: 16,
           fontFamily: FONTS.regular,
-          color: COLORS.white,
         },
         tabBarIcon: ({color, size}) => {
           let iconName;
 
           if (route.name === 'Home') {
-            iconName = 'connectdevelop';
+            iconName = 'institution';
           } else if (route.name === 'Translations') {
-            iconName = 'futbol-o';
+            iconName = 'tv';
           } else if (route.name === 'Contacts') {
-            iconName = 'tty';
+            iconName = 'server';
           } else if (route.name === 'Reservation') {
-            iconName = 'leanpub';
+            iconName = 'shopping-bag';
           }
           return <Icon name={iconName} size={size} color={color} />;
         },
       })}>
       <Tab.Screen
         name="Home"
-        component={FanZoneHomeScreen}
+        component={BitezyHomeScreen}
         options={{title: 'Меню'}}
       />
       <Tab.Screen
         name="Translations"
-        component={FanZoneTranslationsScreen}
+        component={BitezyTranslationsScreen}
         options={{title: 'Транцляции'}}
       />
       <Tab.Screen
         name="Contacts"
-        component={FanZoneContactsScreen}
+        component={BitezyContactsScreen}
         options={{title: 'Контакты'}}
       />
       <Tab.Screen
         name="Reservation"
-        component={FanZoneReservationScreen}
+        component={BitezyReservationScreen}
         options={{title: 'Бронь'}}
       />
     </Tab.Navigator>

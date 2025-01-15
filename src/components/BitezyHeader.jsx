@@ -23,8 +23,7 @@ export default function ({back = false}) {
 
       <Image source={Logo} style={styles.logo} />
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate('FanZoneCartScreen')}>
+      <TouchableOpacity onPress={() => navigation.navigate('BitezyCartScreen')}>
         <Image
           source={require('../assets/cart_icon.png')}
           style={styles.image}
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 25,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.main,
     elevation: 5,
   },
   image: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TextInput, ImageBackground, Text} from 'react-native';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
-import FanZoneHeader from '../components/FanZoneHeader';
+import BitezyHeader from '../components/BitezyHeader';
 import BackgroundImage from '../assets/background.png';
 
 export default function () {
@@ -18,7 +18,7 @@ export default function () {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader />
+      <BitezyHeader />
 
       <Text style={styles.title}>Контакты</Text>
 
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.white,
     marginTop: 10,
-    borderRadius: 12,
+    borderRadius: 0,
     backgroundColor: COLORS.white,
   },
   button: {

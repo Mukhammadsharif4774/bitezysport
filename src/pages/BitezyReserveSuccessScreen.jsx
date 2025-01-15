@@ -2,8 +2,8 @@ import React from 'react';
 import {Text, StyleSheet, ImageBackground, Image} from 'react-native';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import {useNavigation} from '@react-navigation/native';
-import FanZoneHeader from '../components/FanZoneHeader';
-import FanZoneComponent from '../components/FanZoneComponent';
+import BitezyHeader from '../components/BitezyHeader';
+import BitezyComponent from '../components/BitezyComponent';
 import BackgroundImage from '../assets/background.png';
 
 export default function () {
@@ -15,11 +15,11 @@ export default function () {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader back={true} />
+      <BitezyHeader back={true} />
 
       <Text style={styles.text}>Спасибо за резерв!</Text>
 
-      <FanZoneComponent
+      <BitezyComponent
         text="На главную"
         style={styles.button}
         onPress={handleNavigateHome}

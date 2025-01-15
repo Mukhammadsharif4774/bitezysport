@@ -10,8 +10,8 @@ import {
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import QRCode from 'react-native-qrcode-svg';
 import {useNavigation} from '@react-navigation/native';
-import FanZoneHeader from '../components/FanZoneHeader';
-import FanZoneComponent from '../components/FanZoneComponent';
+import BitezyHeader from '../components/BitezyHeader';
+import BitezyComponent from '../components/BitezyComponent';
 import BackgroundImage from '../assets/background.png';
 export default function () {
   const navigation = useNavigation();
@@ -22,19 +22,19 @@ export default function () {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader back={true} />
+      <BitezyHeader back={true} />
 
       <Text style={styles.text}>Спасибо за заказ!</Text>
 
       <View style={styles.qrContainer}>
         <QRCode
-          value="https://kapitanhotels.ru/restaurants/shturm/"
+          value="https://center.sportbeach.ru/cafe/"
           size={Dimensions.get('window').width / 2.5}
           color={COLORS.main}
         />
       </View>
 
-      <FanZoneComponent
+      <BitezyComponent
         text="На главную"
         style={styles.button}
         onPress={handleNavigateHome}

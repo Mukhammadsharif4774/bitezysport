@@ -2,17 +2,17 @@ import React from 'react';
 import {StyleSheet, Text, ImageBackground, Image} from 'react-native';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import BackgroundImage from '../assets/background.png';
-import FanZoneHeader from '../components/FanZoneHeader';
+import BitezyHeader from '../components/BitezyHeader';
 
-export default function FanZoneProductDetailScreen({route}) {
+export default function BitezyProductDetailScreen({route}) {
   const {product} = route.params;
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader back={true} />
-
-      <Image source={product?.image} style={styles.image} />
+      <BitezyHeader back={true} />
 
       <Text style={styles.title}>{product?.name}</Text>
+
+      <Image source={product?.image} style={styles.image} />
 
       <Text style={styles.description}>{product?.description}</Text>
     </ImageBackground>

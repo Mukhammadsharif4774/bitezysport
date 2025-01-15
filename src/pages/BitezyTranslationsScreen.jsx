@@ -7,7 +7,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
-import FanZoneHeader from '../components/FanZoneHeader';
+import BitezyHeader from '../components/BitezyHeader';
 import BackgroundImage from '../assets/background.png';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -36,42 +36,38 @@ export default function () {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader />
+      <BitezyHeader />
 
       <ScrollView
         style={{flex: 1}}
         contentContainerStyle={{paddingBottom: 100, marginTop: 15}}>
-        {renderBroadcast('Ligue 1', '09.02 21:00', 'Marseille \n vs Monaco')}
         {renderBroadcast(
-          'Eredivisie',
-          '16.03 20:00',
-          'Feyenoord \n vs Utrecht',
+          'Ligue 1',
+          '10.02 20:45',
+          'Paris Saint-Germain \n vs Lille',
         )}
+        {renderBroadcast('Eredivisie', '17.03 19:30', 'Ajax \n vs AZ Alkmaar')}
         {renderBroadcast(
           'NBA',
-          '21.03 20:00',
-          'Los Angeles Lakers \n vs Boston Celtics',
+          '22.03 20:30',
+          'Golden State Warriors \n vs Miami Heat',
         )}
-        {renderBroadcast(
-          'Serie A',
-          '26.04 18:30',
-          'Inter Milan \n vs AC Milan',
-        )}
-        {renderBroadcast('Primeira', '31.05 21:00', 'Sporting CP \n vs Braga')}
+        {renderBroadcast('Serie A', '27.04 19:45', 'Juventus \n vs Napoli')}
+        {renderBroadcast('Primeira', '01.06 20:00', 'Benfica \n vs Porto')}
         {renderBroadcast(
           'NHL',
-          '13.06 19:00',
-          'Toronto Maple Leafs \n vs Montreal Canadiens',
+          '14.06 20:00',
+          'Boston Bruins \n vs Washington Capitals',
         )}
         {renderBroadcast(
           'MLB',
-          '26.07 18:00',
-          'New York Yankees \n vs Boston Red Sox',
+          '27.07 19:15',
+          'Los Angeles Dodgers \n vs San Francisco Giants',
         )}
         {renderBroadcast(
           'Champions',
-          '11.08 22:00',
-          'Real Madrid \n vs Liverpool',
+          '12.08 21:45',
+          'Manchester City \n vs Barcelona',
         )}
       </ScrollView>
     </ImageBackground>
@@ -91,12 +87,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingLeft: 20,
     borderColor: COLORS.main,
-    backgroundColor: COLORS.black,
+    backgroundColor: COLORS.white,
   },
   league: {
     fontSize: 40,
     fontFamily: FONTS.black,
-    color: COLORS.white,
+    color: COLORS.main,
     paddingVertical: 8,
   },
   leagueContainer: {
@@ -112,7 +108,7 @@ const styles = StyleSheet.create({
   matchTime: {
     fontSize: 14,
     fontFamily: FONTS.bold,
-    color: COLORS.white,
+    color: COLORS.black,
     width: '60%',
     marginLeft: 15,
   },
@@ -120,7 +116,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontFamily: FONTS.bold,
     fontSize: 20,
-    color: COLORS.white,
+    color: COLORS.black,
     marginTop: 5,
     marginLeft: 5,
   },

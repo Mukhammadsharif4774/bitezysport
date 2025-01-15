@@ -9,9 +9,9 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AppContext} from '../components/AppContext';
-import FanZoneCartItemComponent from '../components/FanZoneCartItemComponent';
-import FanZoneComponent from '../components/FanZoneComponent';
-import FanZoneHeader from '../components/FanZoneHeader';
+import BitezyCartItemComponent from '../components/BitezyCartItemComponent';
+import BitezyComponent from '../components/BitezyComponent';
+import BitezyHeader from '../components/BitezyHeader';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import BackgroundImage from '../assets/background.png';
 
@@ -40,7 +40,7 @@ export default function () {
 
   const handleOrder = () => {
     const destinationScreen = cart.length
-      ? 'FanZoneCartSuccessScreen'
+      ? 'BitezyCartSuccessScreen'
       : 'TabNavigator';
     navigation.navigate('DrawerNavigator', {screen: destinationScreen});
     AsyncStorage.setItem('cartList', JSON.stringify([]));
@@ -49,7 +49,7 @@ export default function () {
 
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader back={true} />
+      <BitezyHeader back={true} />
 
       {!cart.length && (
         <>
@@ -62,7 +62,7 @@ export default function () {
           <View style={{height: height * 0.7}}>
             <ScrollView style={styles.flex} contentContainerStyle={styles.main}>
               {cart.map((item, index) => (
-                <FanZoneCartItemComponent item={item} key={index} />
+                <BitezyCartItemComponent item={item} key={index} />
               ))}
             </ScrollView>
           </View>
@@ -78,7 +78,7 @@ export default function () {
         ''
       )}
 
-      <FanZoneComponent
+      <BitezyComponent
         text={cart.length ? `ЗАКАЗАТЬ` : 'На главную'}
         style={styles.orderButton}
         onPress={handleOrder}

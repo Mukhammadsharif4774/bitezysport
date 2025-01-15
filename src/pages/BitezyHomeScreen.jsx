@@ -1,16 +1,16 @@
 import React from 'react';
 import {StyleSheet, ImageBackground, FlatList} from 'react-native';
-import FanZoneMenuComponent from '../components/FanZoneMenuComponent';
+import BitezyMenuComponent from '../components/BitezyMenuComponent';
 import {COLORS, FONTS, height, width} from '../helpers/colors';
 import {products} from '../assets/products';
 import BackgroundImage from '../assets/background.png';
-import FanZoneHeader from '../components/FanZoneHeader';
+import BitezyHeader from '../components/BitezyHeader';
 
 export default function () {
-  const renderProduct = ({item}) => <FanZoneMenuComponent item={item} />;
+  const renderProduct = ({item}) => <BitezyMenuComponent item={item} />;
   return (
     <ImageBackground source={BackgroundImage} style={styles.container}>
-      <FanZoneHeader />
+      <BitezyHeader />
 
       <FlatList
         data={products}

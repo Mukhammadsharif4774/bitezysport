@@ -5,7 +5,7 @@ import {AppContext} from './AppContext';
 import {COLORS, FONTS, width} from '../helpers/colors';
 import {products} from '../assets/products';
 
-const FanZoneCartItemComponent = ({item}) => {
+const BitezyCartItemComponent = ({item}) => {
   const {shouldRefresh, toggleRefresh} = useContext(AppContext);
   const [carts, setCarts] = useState([]);
 
@@ -179,4 +179,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FanZoneCartItemComponent;
+export default BitezyCartItemComponent;
